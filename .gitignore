@@ -1,0 +1,32 @@
+# Build output (CMake build trees)
+build/
+out/
+
+# Per-user CMake preset overrides
+CMakeUserPresets.json
+
+# Editor / IDE state
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+
+# clangd index
+.cache/
+
+# Compiled artifacts that escape the build dir
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# env
+.env
