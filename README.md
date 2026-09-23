@@ -17,12 +17,30 @@ following [Lazy Foo' Productions' SDL3 tutorials](https://lazyfoo.net/tutorials/
 
 ## Building
 
-_Build instructions will be added along with the build system._
+### Prerequisites
+
+- A C++20 compiler (developed with GCC from [MSYS2](https://www.msys2.org) UCRT64)
+- CMake 3.25+
+- Ninja
+
+SDL3 is downloaded and built automatically by CMake on first configure. No manual install is needed.
+
+### Build and run
+
+```bash
+cmake --preset debug          # configure (first run fetches SDL3)
+cmake --build --preset debug  # compile
+./build/debug/game.exe        # run
+```
+
+Use the `release` preset for an optimized build.
+
+In VS Code, install the **C/C++** and **CMake Tools** extensions; the
+workspace settings make CMake Tools use these same presets.
 
 ## Contributing
 
 - `main` is always buildable; all work goes through pull requests.
 - Branch names: `feat/…`, `fix/…`, `build/…`, `ci/…`, `docs/…`, `chore/…`.
-- Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/),
   e.g. `feat: render player sprite`.
 - Format C++ with `clang-format` (config in `.clang-format`) before committing.
